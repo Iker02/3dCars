@@ -1,0 +1,12 @@
+.car-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.car-image {
+  width: auto;
+  height: 100vh;
+  display: block;
+}
