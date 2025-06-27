@@ -1,0 +1,107 @@
+<div class="px-6 md:px-20 py-10 flex justify-center">
+  <div class="w-full max-w-[1280px] flex flex-col gap-10">
+    <!-- Hero -->
+    <app-car-banner></app-car-banner>
+
+    <!-- Modelos destacados -->
+    <section class="px-4">
+      <h2 class="text-white text-2xl font-bold mb-6">Modelos Destacados</h2>
+      <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <button (click)="redirectToModelTemplate()">
+          <app-modelo-destacado
+            titulo="Modelo Elegance"
+            descripcion="Un coche para cada estilo de vida."
+            imagenUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuCbbolH2lfYr9q2xeAmqVnJh1pp1DfiY0yMAaIyAXxkIXEugKIDoQ-nI6w5HzEZNcapIAwEQtKBzAa-HWCrgpTqfynAzqDjFjbBCtdBkLfBzg0NKZJmDGqmNb_PzNViIVObT1FTiEFB6j7JKCeP_3rIpf32zd0DPDupid6P7nojMHvYLuPImJu2hIld7Vj_H8gnjkhzg55NPNc9ijhEeA7CvejfcCjXddpx4xz1mGsF9rk5BwVXc4NN5mrZseV7-NejI0bAjAqHsHcW"
+          >
+          </app-modelo-destacado>
+        </button>
+
+        <button (click)="redirectToModelTemplate()">
+          <app-modelo-destacado
+            titulo="Modelo Sport"
+            descripcion="Rendimiento y diseño excepcionales."
+            imagenUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuBS7Rl1axZGoOQlic23itHl2PmVWYDUFIq2FnoW1NwybMy_Pv16RjbTRR6bIn3-unMyjgZLoWxgX74gyhwPikI1-HqNviU8ewjeytkZQc-9Zmy0Gq93GJdSa4empMX6Dn5E9qOIKeEMC6R8QG2SaXTsyWD7fFp_Zcoz9oHcOsf7edIZDROhTKWLOleIJR4wlucNlgODnwrQsRysiHfuiDb3QpqAa58wmp7MAxdQjMkT-iHFl_B1Hl8Y7hOAm9I6yC_uxQzFF2uTRjuL"
+          >
+          </app-modelo-destacado>
+        </button>
+
+        <button (click)="redirectToModelTemplate()">
+          <app-modelo-destacado
+            titulo="Modelo Urban"
+            descripcion="Eficiencia para la ciudad."
+            imagenUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuCn6Pio0a5bPTwXJnoB-EQokz6DuVlbvkxsWjUsSvMb1Bhg7vVH_o-LMNdKSVtN-c2ioWBE1Wy7UL2wx7G_LnVgRCiBEb3z6jaWF9mDbzopvSg0kBaboHGPq1JmCZI6b1Wp3JsX4Aoc4K7k8OR0e8bU4TdzdwyHIYPrqdoTCCmYuUnger9OUetvp99uXhOSuqBkCt3WG0Zbw9rzPg8cdHC0RUpK7RBz_0z8aRhTxP1ZT7ybebSfJjGPdu9QGNuWgmdourDQR_FruZi5"
+          >
+          </app-modelo-destacado>
+        </button>
+      </div>
+    </section>
+
+    <!-- Personalización 3D -->
+    <section class="px-4">
+      <h2 class="text-white text-2xl font-bold mb-4">Personalización 3D</h2>
+      <div
+        class="relative aspect-video bg-cover bg-center rounded-2xl overflow-hidden flex items-center justify-center"
+        style="
+          background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkDzp069knrwC_lqDdcEUBmdAcWZ4AY5uJrXAShgk3Q3HJmeFladHcGQbqAR5RuwlAsXS-o1jYEAGMDCqxXsp0kIuyo0TVNfjc1eLoDCM3zughA9n3FWDhTY3GU_fqvv274FxhMqD0F71_VWdPCa7KW9Iyc6wIohPWXJIwErP4uwym6wcpUWO2ENpM6ftGoFghvg70MOZGfiJEJzx4Xz64neWDGylAeIoR082pInPr1uBNOCc-N8iSY9b4nFv7Lr1izhTbmdXz_Inh');
+        "
+      >
+        <button
+          class="bg-black/50 hover:bg-black/70 transition-all duration-300 size-16 rounded-full flex items-center justify-center text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <p
+        class="text-white text-center mt-4 text-base md:text-lg max-w-3xl mx-auto"
+      >
+        Experimenta la personalización de coches de lujo como nunca antes.
+        Modifica cada aspecto del vehículo con nuestro editor 3D: desde el color
+        de la carrocería hasta los detalles interiores.
+      </p>
+      <div class="flex justify-center mt-6">
+        <button
+          class="bg-blue-600 hover:bg-blue-700 transition-colors duration-300 px-6 py-3 rounded-lg text-white font-semibold"
+        >
+          Iniciar Personalización
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="text-center px-6 py-10 text-[#93a6c8] border-t border-white/10"
+    >
+      <div
+        class="flex flex-wrap justify-center gap-6 mb-6 text-base font-medium"
+      >
+        <a href="#">Contacto</a>
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos de Servicio</a>
+      </div>
+      <div class="flex justify-center gap-4">
+        <a href="#" aria-label="Twitter">
+          <svg
+            class="w-6 h-6 text-[#93a6c8]"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+</div>

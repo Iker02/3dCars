@@ -1,4 +1,7 @@
-<div *ngIf="visible" class="relative h-screen w-screen bg-black flex items-center justify-center overflow-hidden">
+<div
+  *ngIf="visible"
+  class="fixed h-screen w-screen bg-black flex items-center justify-center overflow-hidden"
+>
   <!-- Imagen de fondo -->
   <img
     src="../../../assets/car-light.jpg"
@@ -6,18 +9,11 @@
     class="h-screen w-auto object-cover"
   />
 
-  <!-- Gradiente superior -->
-  <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none"></div>
-
-  <!-- Gradiente inferior -->
-  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none"></div>
-
   <!-- Faro circular que se "enciende" -->
-  <div class="absolute inset-0 z-10 pointer-events-none">
+  <div class="absolute inset-0 z-50 pointer-events-none">
     <div class="faro mx-auto my-auto"></div>
   </div>
 </div>
-
 
 <style>
   .faro {
@@ -26,13 +22,13 @@
     border-radius: 50%;
     background: radial-gradient(
       circle,
-      rgba(255, 255, 200, 0.95) 0%,
+      rgb(255, 255, 200) 0%,
       rgba(255, 255, 200, 0.7) 40%,
-      rgba(255, 255, 200, 0.4) 70%,
+      rgb(255, 255, 200) 70%,
       transparent 90%
     );
     animation: faroOn 4s ease-out forwards;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,19 +42,12 @@
       transform: translate(-50%, -50%) scale(0.5);
     }
     90% {
-      opacity: 0.8;
+      opacity: 1;
       transform: translate(-50%, -50%) scale(10);
     }
     100% {
       opacity: 1;
       transform: translate(-50%, -50%) scale(10);
-      background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0.7) 40%,
-        rgba(255, 255, 255, 0.4) 70%,
-        transparent 90%
-      );
     }
   }
 </style>

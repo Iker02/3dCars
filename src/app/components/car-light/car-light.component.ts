@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,11 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./car-light.component.css']
 })
 export class CarLightComponent {
+  @Output() animationDone = new EventEmitter<void>();
+
   visible = true;
 
-  constructor() {
+  ngOnInit() {
+    // Espera el tiempo de la animación (4s por ejemplo), luego emite evento
     setTimeout(() => {
       this.visible = false;
+      this.animationDone.emit();
     }, 4000);
   }
 }
